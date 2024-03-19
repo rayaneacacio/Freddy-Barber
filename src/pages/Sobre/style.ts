@@ -4,7 +4,7 @@ import imgPng from "../../assets/imgs/imgpag2.png";
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   width: 100vw;
-  padding: 3rem 2rem;
+  padding: 5rem 2rem;
 
   .row {
     background-color: ${({ theme }) => theme.COLORS.GRAY};
@@ -26,10 +26,10 @@ export const Container = styled.div`
   }
 
   @media(min-width: 1000px) {
-    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    padding-bottom: 10rem;
 
     p {
       width: 50rem;

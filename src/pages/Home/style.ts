@@ -32,6 +32,8 @@ export const Container = styled.div`
   }
 
   @media(min-width: 1000px) {
+    height: 95vh;
+
     header {
       padding: 0 15rem 0 10rem;
 
