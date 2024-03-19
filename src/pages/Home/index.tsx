@@ -14,7 +14,7 @@ export function Home(): ReactElement {
       <main>
         <h1>Barbearia do Fred</h1>
         <p>Venha agendar seu corte com quem entende do assunto, veja os horarios disponiveis no nosso site.</p>
-        <button>AGENDE SEU CORTE</button>
+        <button>ENTRE EM CONTATO</button>
         <Contact />
       </main>
     </Container>

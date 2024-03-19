@@ -61,6 +61,10 @@ export default createGlobalStyle`
       font-size: 4.1rem;
     }
 
+    h2 {
+      font-size: 3rem;
+    }
+
     button {
       font-size: 1.8rem;
     }
