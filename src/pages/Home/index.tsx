@@ -6,7 +6,6 @@ import { Contact } from "../../components/Contact";
 export function Home(): ReactElement {
   return (
     <Container>
-      <div>
       <header>
         <Logo />
         <Contact />
@@ -18,7 +17,6 @@ export function Home(): ReactElement {
         <button>AGENDE SEU CORTE</button>
         <Contact />
       </main>
-      </div>
     </Container>
   )
 }

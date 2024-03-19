@@ -9,14 +9,19 @@ export default createGlobalStyle`
   }
 
   :root {
-    font-size: 62.5%;
+    font-size: 62.5%;    
   }
 
   body {
-    background-color: ${({ theme }) => theme.COLORS.GRAY};
+    background-color: ${({ theme }) => theme.COLORS.BROWN};
     color: ${({ theme }) => theme.COLORS.GRAY};
     font-family: ${({ theme }) => theme.FONTS.ROBOTO};
     font-size: 1.7rem;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   h1 {

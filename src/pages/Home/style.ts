@@ -1,21 +1,13 @@
 import styled from "styled-components";
-import backgroundIMG from "../../assets/imgs/backgroundIMG.jpg";
+import backgroundIMG from "../../assets/imgs/backgroundIMG.webp";
 
 export const Container = styled.div`
   background: url(${ backgroundIMG }) no-repeat center center;
-  background-color: ${({ theme }) => theme.COLORS.BROWN_2};
-  background-blend-mode: hard-light;
   background-size: cover;
   color: ${({ theme }) => theme.COLORS.WHITE};
   width: 100vw;
-  height: 100vh;
-
-  > div {
-    backdrop-filter: grayscale(0.7);
-    width: 100%;
-    height: 100%;
-    padding: 1rem 5rem;
-  }
+  height: 85vh;
+  padding: 1rem 5rem;
 
   header {
     display: flex;
