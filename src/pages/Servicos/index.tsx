@@ -28,12 +28,21 @@ export function Servicos(): ReactElement {
   ];
 
   function handleResize(): void {
-    if(window.innerWidth > 1000) {
-      setSlidesPerview(2)
+    if(window.innerWidth >= 1400) {
+      setSlidesPerview(3);
+      return;
     }
+    
+    if(window.innerWidth >= 1000) {
+      setSlidesPerview(2);
+      return;
+    }
+
+    setSlidesPerview(1);
   }
 
   useEffect(() => {
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => {

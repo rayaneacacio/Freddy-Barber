@@ -60,6 +60,7 @@ export const Container = styled.div`
 
   @media(min-width: 1000px) {
     .description {
+      padding-bottom: 20rem !important;
       margin-top: 10rem;
       font-size: 1.8rem;
       flex-direction: row;
@@ -103,22 +104,22 @@ export const Carrossel = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    width: 26rem;
-    height: 26rem;
+    width: 27rem;
+    height: 27rem;
   }
 
   .descriptionSlide {
     color: ${({ theme }) => theme.COLORS.GRAY};
-    width: 26rem;
+    width: 27rem;
     height: 50rem;
     position: absolute;
     top: 52%;
-    left: 47%;
+    left: 48%;
     transform: translate(-50%, -50%);
 
     > :first-child {
       width: 100%;
-      height: 26rem;
+      height: 27rem;
       border: 2px solid ${({ theme }) => theme.COLORS.ORANGE};
     }
 
@@ -144,17 +145,65 @@ export const Carrossel = styled.div`
     background: url(${ arrowToLeft });
     background-size: contain;
     background-repeat: no-repeat;
-    width: 5rem;
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
   }
 
   .swiper-button-next {
     background: url(${ arrowToRight });
     background-size: contain;
     background-repeat: no-repeat;
-    width: 5rem;
+    background-color: white;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100%;
   }
 
   @media(min-width: 1000px) {
-    
+    > div {
+      width: 75rem;
+    }
+
+    .swiper {
+      padding: 0 2.9rem;
+    }
+  }
+
+  @media(min-width: 1400px) {
+    height: 60rem;
+
+    > div {
+      width: 130rem;
+    }
+
+    .swiper {
+      height: 60rem;
+    }
+
+    .imgSlide {
+      width: 32rem;
+      height: 32rem;
+    }
+
+    .descriptionSlide {
+      width: 32rem;
+      top: 44%;
+      left: 47%;
+
+      > :first-child {
+        height: 32rem;
+      }
+
+      > :last-child {
+        margin-left: 1rem;
+
+        p {
+          font-size: 1.7rem;
+          width: 33rem;
+        }
+      }
+    }
   }
 `;
