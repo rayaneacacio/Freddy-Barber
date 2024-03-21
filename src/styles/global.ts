@@ -17,11 +17,10 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.GRAY};
     font-family: ${({ theme }) => theme.FONTS.ROBOTO};
     font-size: 1.7rem;
-    overflow-x: hidden;
+  }
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
   }
 
   h1 {

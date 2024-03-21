@@ -4,7 +4,7 @@ import imgPng from "../../assets/imgs/imgpag2.png";
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   width: 100vw;
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 10rem;
 
   .row {
     background-color: ${({ theme }) => theme.COLORS.GRAY};
@@ -17,12 +17,15 @@ export const Container = styled.div`
     font-weight: 600;
   }
 
-  p {
-    width: 30rem;
-  }
-
   h2 {
     margin: 2rem 0;
+  }
+
+  @media(min-width: 550px) {
+
+    p {
+      width: 40rem;
+    }
   }
 
   @media(min-width: 1000px) {

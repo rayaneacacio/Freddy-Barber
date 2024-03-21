@@ -5,7 +5,7 @@ export const Container = styled.div`
   background: url(${ backgroundImgPng }) no-repeat center center;
   background-size: cover;
   width: 100vw;
-  height: 13.6rem;
+  height: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
