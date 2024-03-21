@@ -12,7 +12,10 @@ export function Sobre(): ReactElement {
         excelentes profisssionais, para a segurança garantida de todos os clientes.</p>
       </div>
 
-      <Image />
+      <Image>
+        <div />
+        <div />
+      </Image>
     </Container>
   )
 }

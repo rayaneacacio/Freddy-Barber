@@ -62,14 +62,12 @@ export const Container = styled.div`
     .description {
       padding-bottom: 20rem !important;
       margin-top: 10rem;
-      font-size: 1.8rem;
       flex-direction: row;
       justify-content: center;
       flex-wrap: wrap;
       gap: 5rem;
 
       p {
-        font-size: 1.7rem;
         width: 30rem;
       }
     }

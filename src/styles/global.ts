@@ -17,12 +17,15 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.GRAY};
     font-family: ${({ theme }) => theme.FONTS.ROBOTO};
     font-size: 1.7rem;
-  }
+    height: auto;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 
-  &::-webkit-scrollbar {
-    display: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
-
+  
   h1 {
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 2.7rem;
@@ -53,11 +56,22 @@ export default createGlobalStyle`
 
   @media(min-width: 1000px) {
     body {
-      font-size: 2rem;
+      &::-webkit-scrollbar {
+        display: block;
+        background-color: ${({ theme }) => theme.COLORS.BROWN};
+        width: 12px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.COLORS.WHITE};
+        width: 7px;
+        border-radius: 10px;
+        border: 3px solid ${({ theme }) => theme.COLORS.BROWN};;
+      }
     }
 
     h1 {
-      font-size: 4.1rem;
+      font-size: 3.5rem;
     }
 
     h2 {

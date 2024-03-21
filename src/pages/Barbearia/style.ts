@@ -27,11 +27,11 @@ export const Container = styled.div`
     height: 50vh;
 
     h1 {
-      font-size: 3.3rem;
+      font-size: 3rem;
     }
 
     h2 {
-      font-size: 2.7rem;
+      font-size: 2.5rem;
     }
 
     svg {

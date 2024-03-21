@@ -4,7 +4,7 @@ import imgPng from "../../assets/imgs/imgpag2.png";
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   width: 100vw;
-  padding: 5rem 2rem 10rem;
+  padding: 5rem 5rem 10rem;
 
   .row {
     background-color: ${({ theme }) => theme.COLORS.GRAY};
@@ -22,10 +22,13 @@ export const Container = styled.div`
   }
 
   @media(min-width: 550px) {
-
     p {
       width: 40rem;
     }
+  }
+
+  @media(min-width: 600px) {
+    padding: 5rem 12rem 10rem;
   }
 
   @media(min-width: 1000px) {
@@ -33,7 +36,9 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-evenly;
     padding-bottom: 10rem;
+  }
 
+  @media(min-width: 1400px) {
     p {
       width: 50rem;
     }
@@ -45,9 +50,29 @@ export const Image = styled.div`
 
   @media(min-width: 1000px) {
     display: block;
-    background: url(${ imgPng }) no-repeat center center;
-    background-size: cover;
-    width: 60rem;
-    height: 32rem;
+    width: 50rem;
+    height: 30rem;
+    position: relative;
+
+    > div {
+      width: 100%;
+      height: 100%;
+    }
+  
+    > :first-child {
+      background: url(${ imgPng }) no-repeat center center;
+      background-size: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    > :last-child {
+      border: 2px solid ${({ theme }) => theme.COLORS.ORANGE};
+      position: absolute;
+      top: 54%;
+      left: 47%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+    }
   }
 `;
