@@ -11,7 +11,7 @@ export function Contatos(): ReactElement {
   return (
     <Container className="contatos">
       <div className="row" />
-      <h2>Entrar em contato</h2>
+      <h2>Entre contato agora mesmo!</h2>
       
       <div className="links">
         <a href="#">

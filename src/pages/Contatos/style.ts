@@ -8,12 +8,14 @@ export const Container = styled.div`
 
   .row {
     background-color: ${({ theme }) => theme.COLORS.BROWN};
-    width: 7rem;
+    width: 8rem;
     height: 2px;
+    margin-top: 7rem;
   }
 
   h2 {
-    margin: 1rem 0;
+    font-size: 2.3rem;
+    margin: 1rem 0 2rem;
   }
 
   .links {
