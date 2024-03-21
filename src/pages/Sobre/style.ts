@@ -4,7 +4,7 @@ import imgPng from "../../assets/imgs/imgpag2.png";
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.WHITE};
   width: 100vw;
-  padding: 5rem 5rem 10rem;
+  padding: 5rem 5rem 7rem;
 
   .row {
     background-color: ${({ theme }) => theme.COLORS.GRAY};
@@ -28,7 +28,8 @@ export const Container = styled.div`
   }
 
   @media(min-width: 600px) {
-    padding: 5rem 12rem 10rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
   }
 
   @media(min-width: 1000px) {
@@ -64,6 +65,7 @@ export const Image = styled.div`
       background-size: cover;
       position: relative;
       z-index: 1;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     }
 
     > :last-child {

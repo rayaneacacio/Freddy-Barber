@@ -17,15 +17,16 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.GRAY};
     font-family: ${({ theme }) => theme.FONTS.ROBOTO};
     font-size: 1.7rem;
-    height: auto;
-    scroll-behavior: smooth;
     overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
 
     &::-webkit-scrollbar {
+      width: 0;
       display: none;
     }
   }
-  
+
   h1 {
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 2.7rem;
@@ -45,17 +46,23 @@ export default createGlobalStyle`
     font-weight: 700;
     padding: 1rem 5rem;
     border-radius: 5px;
+  }
+
+  button, a {
+    text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
     -webkit-tap-highlight-color: transparent;
 
     &:hover {
-      filter: brightness(0.8);
+      filter: brightness(0.7);
     }
   }
 
   @media(min-width: 1000px) {
     body {
+      scrollbar-width: auto;
+
       &::-webkit-scrollbar {
         display: block;
         background-color: ${({ theme }) => theme.COLORS.BROWN};
@@ -63,10 +70,10 @@ export default createGlobalStyle`
       }
 
       &::-webkit-scrollbar-thumb {
-        background-color: ${({ theme }) => theme.COLORS.WHITE};
+        background-color: #5c5c5c;
         width: 7px;
         border-radius: 10px;
-        border: 3px solid ${({ theme }) => theme.COLORS.BROWN};;
+        border: 3px solid ${({ theme }) => theme.COLORS.BROWN};
       }
     }
 

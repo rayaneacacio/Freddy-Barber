@@ -38,7 +38,7 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.COLORS.WHITE};
     font-size: 1.3rem;
     font-weight: 300;
-    padding: 2rem 0 10rem;
+    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;

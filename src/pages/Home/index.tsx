@@ -8,6 +8,15 @@ import { Servicos } from "../Servicos";
 import { Contatos } from "../Contatos";
 
 export function Home(): ReactElement {
+  function handleContact(): void {
+    const divContatos = document.querySelector(".contatos")! as HTMLDivElement;
+
+    window.scroll({
+      top: (divContatos.offsetTop - 80),
+      behavior: "smooth"
+    });
+  }
+
   return (
     <Container>
       <div>
@@ -19,7 +28,7 @@ export function Home(): ReactElement {
         <main>
           <h1>Barbearia do Fred</h1>
           <p>Venha agendar seu corte com quem entende do assunto, veja os horarios disponiveis no nosso site.</p>
-          <button>ENTRE EM CONTATO</button>
+          <button onClick={ handleContact }>ENTRE EM CONTATO</button>
           <Contact />
         </main>
       </div>
