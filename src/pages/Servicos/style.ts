@@ -161,6 +161,8 @@ export const Carrossel = styled.div`
   }
 
   @media(min-width: 1000px) {
+    height: 55rem;
+
     > div {
       width: 75rem;
     }
@@ -171,8 +173,6 @@ export const Carrossel = styled.div`
   }
 
   @media(min-width: 1400px) {
-    height: 60rem;
-
     > div {
       width: 130rem;
     }

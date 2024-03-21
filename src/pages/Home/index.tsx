@@ -12,7 +12,7 @@ export function Home(): ReactElement {
     const divContatos = document.querySelector(".contatos")! as HTMLDivElement;
 
     window.scroll({
-      top: (divContatos.offsetTop - 80),
+      top: divContatos.offsetTop,
       behavior: "smooth"
     });
   }

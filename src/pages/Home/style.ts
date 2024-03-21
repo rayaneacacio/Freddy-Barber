@@ -2,6 +2,11 @@ import styled from "styled-components";
 import backgroundIMG from "../../assets/imgs/backgroundIMG.webp";
 
 export const Container = styled.div`
+  &::-webkit-scrollbar {
+    width: 0;
+    display: none;
+  }
+
   > :first-child {
     background: url(${ backgroundIMG }) no-repeat center center;
     background-size: cover;

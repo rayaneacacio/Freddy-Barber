@@ -61,8 +61,6 @@ export default createGlobalStyle`
 
   @media(min-width: 1000px) {
     body {
-      scrollbar-width: auto;
-
       &::-webkit-scrollbar {
         display: block;
         background-color: ${({ theme }) => theme.COLORS.BROWN};

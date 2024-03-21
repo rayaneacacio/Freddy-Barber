@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import backgroundImgPng from "../../assets/imgs/backgroundimg3.png";
 
 export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.WHITE};
@@ -6,11 +7,15 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
+  .titleDesktop {
+    display: none;
+  }
+
   .row {
     background-color: ${({ theme }) => theme.COLORS.BROWN};
     width: 8rem;
     height: 2px;
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
 
   h2 {
@@ -19,6 +24,7 @@ export const Container = styled.div`
   }
 
   .links {
+    background-color: ${({ theme }) => theme.COLORS.WHITE};
     border-radius: 4px;
 
     a {
@@ -39,9 +45,18 @@ export const Container = styled.div`
     }
   }
 
-  .map > iframe {
+  .map {
     width: 33rem;
     height: 30rem;
+  }
+
+  .map > iframe {
+    width: 100%;
+    height: 100%;
+
+    &:focus, &:focus-visible, &:active {
+      border: 3px solid ${({ theme }) => theme.COLORS.ORANGE};
+    }
   }
 
   .logo {
@@ -51,13 +66,13 @@ export const Container = styled.div`
     > :first-child {
       width: 18rem;
       height: 7rem;
+    }
 
-      p {
-        color: ${({ theme }) => theme.COLORS.GRAY};
-        font-size: 1.3rem;
-        bottom: 1rem;
-        right: 3rem;
-      }
+    p {
+      color: ${({ theme }) => theme.COLORS.GRAY};
+      font-size: 1.3rem;
+      bottom: 1rem;
+      right: 3rem;
     }
 
     > :last-child {
@@ -78,11 +93,63 @@ export const Container = styled.div`
   }
 
   @media(min-width: 1000px) {
-    .links, .map {
-    width: 33rem;
-    height: 30rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    border: 3px solid ${({ theme }) => theme.COLORS.ORANGE};
-  }
+    background-color: ${({ theme }) => theme.COLORS.BROWN};
+
+    h2 {
+      color: ${({ theme }) => theme.COLORS.ORANGE};
+      font-size: 3rem;
+      margin: -5rem 0 4rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: -18rem;
+    }
+
+    .links {
+      background-color: ${({ theme }) => theme.COLORS.BROWN};
+      padding-right: 10rem;
+
+      a {
+        color: ${({ theme }) => theme.COLORS.WHITE};
+      }
+
+      svg {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+
+    .map {
+      width: 50rem;
+      height: 40rem;
+    }
+
+    .logo {
+      margin-top: 20rem;
+
+      p {
+        color: ${({ theme }) => theme.COLORS.WHITE};
+      }
+
+      svg path {
+        fill: ${({ theme }) => theme.COLORS.ORANGE};
+      }
+    }
+
+    .titleMobile, .row {
+      display: none;
+    }
+
+    .titleDesktop {
+      background: url(${ backgroundImgPng }) no-repeat center center;
+      background-size: cover;
+      width: 100vw;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 `;
