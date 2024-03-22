@@ -1,18 +1,31 @@
 import { ReactElement } from "react";
 import { Container, Image } from "./style";
-import { home, intersectionObserver } from "../../scripts/intersectionObserver";
 
 export function Sobre(): ReactElement {
+  const home = document.querySelector("body > div") as HTMLDivElement;
+  const TextObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const htmlElement = entry.target as HTMLDivElement;
+
+        if(htmlElement.classList.contains("row")) {
+          htmlElement.style.animation = "animateHeightRow 1s forwards";
+        } else {
+          htmlElement.style.animation = "animateToBottom 1s forwards";
+        }
+      };
+    });
+  }, {
+    threshold: 1
+  });
+
   if(home) {
     home.addEventListener("scroll", (): void => {
       const children = Array.from(document.querySelectorAll(".sobreABarbearia *")) as HTMLElement[];
-      children.map(child => {
-        intersectionObserver.observe(child);
-      });
 
-      if(window.innerWidth >= 1000) {
-        intersectionObserver.observe(document.querySelector(".img")!);
-      }
+      children.map(child => {
+        TextObserver.observe(child);
+      });
     });
   }
 
