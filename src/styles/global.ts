@@ -17,13 +17,18 @@ export default createGlobalStyle`
     color: ${({ theme }) => theme.COLORS.GRAY};
     font-family: ${({ theme }) => theme.FONTS.ROBOTO};
     font-size: 1.7rem;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+    overflow: hidden;
 
-    &::-webkit-scrollbar {
-      width: 0;
-      display: none;
+    > div {
+      width: 100%;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: auto;
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
 
@@ -49,7 +54,6 @@ export default createGlobalStyle`
   }
 
   button, a {
-    text-decoration: none;
     cursor: pointer;
     transition: 0.3s;
     -webkit-tap-highlight-color: transparent;
@@ -60,7 +64,7 @@ export default createGlobalStyle`
   }
 
   @media(min-width: 1000px) {
-    body {
+    body div {
       &::-webkit-scrollbar {
         display: block;
         background-color: ${({ theme }) => theme.COLORS.BROWN};
@@ -85,6 +89,46 @@ export default createGlobalStyle`
 
     button {
       font-size: 1.8rem;
+    }
+  }
+
+  @keyframes animateRow {
+    from {
+      height: 0;
+    }
+    to {
+      height: 5px;
+    }
+  }
+
+  @keyframes animateToBottom {
+    from {
+      opacity: 0;
+      transform: translateY(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animateToRight {
+    from {
+      opacity: 0;
+      transform: translateX(-3rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animateImg {
+    from {
+      transform: scale(1.15);
+    }
+    to {
+      transform: scale(1);
     }
   }
 `;

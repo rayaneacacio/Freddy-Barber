@@ -122,7 +122,7 @@ export const Carrossel = styled.div`
       border: 2px solid ${({ theme }) => theme.COLORS.ORANGE};
     }
 
-    > :last-child {
+    > div {
       margin-left: 2rem;
 
       h2 {
@@ -164,7 +164,7 @@ export const Carrossel = styled.div`
     height: 55rem;
 
     > div {
-      width: 75rem;
+      width: 80rem;
     }
 
     .swiper {
@@ -189,7 +189,6 @@ export const Carrossel = styled.div`
     .descriptionSlide {
       width: 32rem;
       top: 44%;
-      left: 47%;
 
       > :first-child {
         height: 32rem;

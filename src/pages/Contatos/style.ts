@@ -134,7 +134,7 @@ export const Container = styled.div`
       }
 
       svg path {
-        fill: ${({ theme }) => theme.COLORS.ORANGE};
+        fill: ${({ theme }) => theme.COLORS.WHITE};
       }
     }
 
