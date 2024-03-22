@@ -92,19 +92,43 @@ export default createGlobalStyle`
     }
   }
 
-  @keyframes animateRow {
+  @keyframes animateHeightRow {
     from {
+      opacity: 0;
       height: 0;
     }
     to {
+      opacity: 1;
       height: 5px;
+    }
+  }
+
+  @keyframes animateWidthRow {
+    from {
+      opacity: 0;
+      width: 3px;
+    }
+    to {
+      opacity: 1;
+      width: 5rem;
     }
   }
 
   @keyframes animateToBottom {
     from {
       opacity: 0;
-      transform: translateY(-3rem);
+      transform: translateY(-2rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes animateToTop {
+    from {
+      opacity: 0;
+      transform: translateY(5rem);
     }
     to {
       opacity: 1;
@@ -115,11 +139,11 @@ export default createGlobalStyle`
   @keyframes animateToRight {
     from {
       opacity: 0;
-      transform: translateX(-3rem);
+      transform: translateX(-4rem);
     }
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
     }
   }
 
@@ -129,6 +153,28 @@ export default createGlobalStyle`
     }
     to {
       transform: scale(1);
+    }
+  }
+
+  @keyframes animateWidthText {
+    from {
+      opacity: 0;
+      transform: rotateY(45deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotateY(0);
+    }
+  }
+
+  @keyframes animateSvg {
+    from {
+      opacity: 0;
+      transform: rotate3d(1, 1, 1, 45deg);
+    }
+    to {
+      opacity: 1;
+      transform: rotate3d(0);
     }
   }
 `;

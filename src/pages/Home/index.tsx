@@ -10,8 +10,7 @@ import { Contatos } from "../Contatos";
 export function Home(): ReactElement {
   function handleContact(): void {
     const divContatos = document.querySelector(".contatos")! as HTMLDivElement;
-
-    window.scroll({
+    document.querySelector("body div")!.scroll({
       top: divContatos.offsetTop,
       behavior: "smooth"
     });
@@ -19,7 +18,7 @@ export function Home(): ReactElement {
 
   return (
     <Container>
-      <div className="content">
+      <div className="home">
         <BackgroundImg />
 
         <header>

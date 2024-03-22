@@ -2,12 +2,16 @@ import styled from "styled-components";
 import backgroundIMG from "../../assets/imgs/backgroundIMG.webp";
 
 export const Container = styled.div`
-  .content {
+  .home {
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100vw;
     height: 85vh;
     position: relative;
     overflow: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   header {
@@ -85,6 +89,6 @@ export const BackgroundImg = styled.div`
   color: ${({ theme }) => theme.COLORS.WHITE};
   width: 100vw;
   height: 100%;
-  animation: animateImg 1s forwards;
+  animation: animateImg 1.5s forwards;
   transition: transform 1s cubic-bezier(.13,.55,.25,1),opacity .5s cubic-bezier(.13,.55,.25,1);
 `;
