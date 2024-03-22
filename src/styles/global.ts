@@ -57,9 +57,11 @@ export default createGlobalStyle`
     cursor: pointer;
     transition: 0.3s;
     -webkit-tap-highlight-color: transparent;
+    transition: 0.3s;
 
     &:hover {
       filter: brightness(0.7);
+      transform: scale(1.1);
     }
   }
 

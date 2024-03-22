@@ -8,7 +8,7 @@ export function Barbearia(): ReactElement {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const htmlElement = entry.target as HTMLDivElement;
-        htmlElement.style.animation = "animateSvg 0.5s forwards";
+        htmlElement.style.animation = "animateSvg 1s forwards";
       };
     });
   }, {
