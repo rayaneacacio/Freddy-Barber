@@ -66,10 +66,14 @@ export default createGlobalStyle`
   }
 
   @media(min-width: 1000px) {
+    body {
+      font-size: 1.8rem;
+    }
+
     body div {
       &::-webkit-scrollbar {
         display: block;
-        background-color: ${({ theme }) => theme.COLORS.BROWN};
+        background-color: ${({ theme }) => theme.COLORS.WHITE};
         width: 12px;
       }
 
@@ -77,7 +81,7 @@ export default createGlobalStyle`
         background-color: #5c5c5c;
         width: 7px;
         border-radius: 10px;
-        border: 3px solid ${({ theme }) => theme.COLORS.BROWN};
+        border: 2px solid ${({ theme }) => theme.COLORS.WHITE};
       }
     }
 
