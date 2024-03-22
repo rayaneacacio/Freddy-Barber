@@ -13,7 +13,7 @@ export function Contatos(): ReactElement {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const htmlElement = entry.target as HTMLDivElement;
-        htmlElement.style.animation = "animateToRight 0.5s forwards";
+        htmlElement.style.animation = "animateToRight 1s forwards";
       };
     });
   }, {
