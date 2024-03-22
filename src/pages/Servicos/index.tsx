@@ -14,7 +14,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import { useEffect } from "react";
-
 register();
 
 export function Servicos(): ReactElement {
@@ -26,6 +25,51 @@ export function Servicos(): ReactElement {
     corte3,
     corte4
   ];
+
+  const home = document.querySelector("body > div") as HTMLDivElement;
+  const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const htmlElement = entry.target as HTMLDivElement;
+
+        if(htmlElement.classList.contains("row")) {
+          htmlElement.style.animation = "animateWidthRow 0.5s forwards";
+          htmlElement.style.animationDelay = "0.3s";
+        } else {
+          htmlElement.style.animation = "animateWidthText 1s forwards";
+        }
+        
+      };
+    });
+  }, {
+    threshold: 1
+  });
+
+  const swiperObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const htmlElement = entry.target as HTMLDivElement;
+        htmlElement.style.animation = "animateToTop 1s forwards";
+      };
+    });
+  }, {
+    threshold: 0
+  });
+
+  if(home) {
+    home.addEventListener("scroll", (): void => {
+      const p = document.querySelector(".servicos p")!;
+      const swiper = document.querySelector(".swiper")!;
+      const rows = Array.from(document.querySelectorAll(".servicos .row"))!;
+
+      intersectionObserver.observe(p);
+      swiperObserver.observe(swiper);
+
+      rows.map(row => {
+        intersectionObserver.observe(row);
+      });
+    })
+  }
 
   function handleResize(): void {
     if(window.innerWidth >= 1400) {
@@ -52,7 +96,7 @@ export function Servicos(): ReactElement {
   }, []);
 
   return (
-    <Container>
+    <Container className="servicos">
       <div className="row" />
       <p>Nossos Serviços</p>
       <h2>Conheça as especialidades da casa</h2>

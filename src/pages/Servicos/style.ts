@@ -25,6 +25,7 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.COLORS.ORANGE};
     width: 5rem;
     height: 2px;
+    opacity: 0;
   }
   
   .description, .description > div {
@@ -46,6 +47,13 @@ export const Container = styled.div`
   svg {
     width: 8rem;
     height: 8rem;
+  }
+
+  > p {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
   }
 
   @media(min-width: 550px) {
@@ -91,6 +99,7 @@ export const Carrossel = styled.div`
     height: 50rem;
     position: absolute;
     top: -7rem;
+    opacity: 0;
   }
 
   .swiper-slide {
