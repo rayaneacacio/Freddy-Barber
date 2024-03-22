@@ -2,26 +2,25 @@ import styled from "styled-components";
 import backgroundIMG from "../../assets/imgs/backgroundIMG.webp";
 
 export const Container = styled.div`
-  &::-webkit-scrollbar {
-    width: 0;
-    display: none;
-  }
-
-  > :first-child {
-    background: url(${ backgroundIMG }) no-repeat center center;
-    background-size: cover;
+  .content {
     color: ${({ theme }) => theme.COLORS.WHITE};
     width: 100vw;
     height: 85vh;
-    padding: 1rem 5rem;
+    position: relative;
+    overflow: hidden;
   }
 
   header {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    top: 1rem;
+    left: 5rem;
+    right: 0;
 
     > div:last-of-type {
       display: none;
+      z-index: 1;
     }
   }
 
@@ -29,11 +28,10 @@ export const Container = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, 0%);
     width: 75%;
 
     > p {
-      font-size: 2rem;
       width: 30rem;
       margin: 1rem 0 3rem;
     }
@@ -68,6 +66,7 @@ export const Container = styled.div`
       }
 
       > p {
+        font-size: 2rem;
         width: 50rem;
         margin: 2rem 0 5rem;
       }
@@ -78,4 +77,14 @@ export const Container = styled.div`
       padding: 3rem 0;
     }
   }
+`;
+
+export const BackgroundImg = styled.div`
+  background: url(${ backgroundIMG }) no-repeat center center;
+  background-size: cover;
+  color: ${({ theme }) => theme.COLORS.WHITE};
+  width: 100vw;
+  height: 100%;
+  animation: animateImg 1s forwards;
+  transition: transform 1s cubic-bezier(.13,.55,.25,1),opacity .5s cubic-bezier(.13,.55,.25,1);
 `;

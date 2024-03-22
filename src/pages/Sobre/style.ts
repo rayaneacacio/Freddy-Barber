@@ -6,11 +6,17 @@ export const Container = styled.div`
   width: 100vw;
   padding: 5rem 5rem 7rem;
 
+  .sobreABarbearia {
+    height: 25rem;
+  }
+
   .row {
     background-color: ${({ theme }) => theme.COLORS.GRAY};
     width: 5rem;
-    height: 5px;
+    height: 0;
     margin-bottom: 1rem;
+    display: none;
+    animation: animateRow 0.5s forwards;
   }
 
   p:first-of-type {
@@ -19,6 +25,15 @@ export const Container = styled.div`
 
   h2 {
     margin: 2rem 0;
+  }
+
+  .sobreABarbearia > *:not(.row) {
+    display: none;
+    animation: animateToBottom 1s forwards;
+  }
+
+  .show {
+    display: block !important;
   }
 
   @media(min-width: 550px) {
@@ -50,7 +65,6 @@ export const Image = styled.div`
   display: none;
 
   @media(min-width: 1000px) {
-    display: block;
     width: 50rem;
     height: 30rem;
     position: relative;

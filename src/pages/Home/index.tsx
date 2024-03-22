@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Container } from "./style";
+import { Container, BackgroundImg } from "./style";
 import { Logo } from "../../components/Logo";
 import { Contact } from "../../components/Contact";
 import { Sobre } from "../Sobre";
@@ -19,7 +19,9 @@ export function Home(): ReactElement {
 
   return (
     <Container>
-      <div>
+      <div className="content">
+        <BackgroundImg />
+
         <header>
           <Logo />
           <Contact />
@@ -38,7 +40,7 @@ export function Home(): ReactElement {
       <Servicos />
       <Contatos />
 
-      <footer>FREDSON SANTOS - Copyright 2020</footer>
+      <footer>FREDSON SANTOS - Copyright 2024</footer>
     </Container>
   )
 }
