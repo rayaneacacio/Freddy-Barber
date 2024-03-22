@@ -26,13 +26,18 @@ export const Container = styled.div`
   .links {
     background-color: ${({ theme }) => theme.COLORS.WHITE};
     border-radius: 4px;
+    width: 40rem;
+    height: 29rem;
 
     a {
       color: ${({ theme }) => theme.COLORS.BROWN};
-      display: flex;
       align-items: center;
       gap: 5px;
-      margin: 3rem 2rem;
+      margin: 3rem;
+      display: flex;
+      opacity: 0;
+      /* animation-delay: 0.5s; */
+      /* animation: animateToRight 0.3s forwards; */
     }
 
     svg {
@@ -92,6 +97,16 @@ export const Container = styled.div`
     }
   }
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .show {
+    display: flex !important;
+  }
+
   @media(min-width: 1000px) {
     background-color: ${({ theme }) => theme.COLORS.BROWN};
 
@@ -102,14 +117,13 @@ export const Container = styled.div`
     }
 
     .content {
-      display: flex;
       flex-direction: row-reverse;
       margin-top: -18rem;
     }
 
     .links {
       background-color: ${({ theme }) => theme.COLORS.BROWN};
-      padding-right: 10rem;
+      height: 40rem;
 
       a {
         color: ${({ theme }) => theme.COLORS.WHITE};

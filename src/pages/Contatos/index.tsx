@@ -8,6 +8,29 @@ import { InstagramSvg } from "../../assets/svgs/instagram";
 import { Logo } from "../../components/Logo";
 
 export function Contatos(): ReactElement {
+  const home = document.querySelector("body > div") as HTMLDivElement;
+  const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const htmlElement = entry.target as HTMLDivElement;
+        htmlElement.style.animation = "animateToRight 0.5s forwards";
+      };
+    });
+  }, {
+    threshold: 1
+  });
+
+
+  if(home) {
+    home.addEventListener("scroll", (): void => {
+      const links = Array.from(document.querySelectorAll(".links a"))!;
+
+      links.map(link => {
+        intersectionObserver.observe(link);
+      });
+    })
+  }
+
   return (
     <Container className="contatos">
       <div className="titleDesktop">
