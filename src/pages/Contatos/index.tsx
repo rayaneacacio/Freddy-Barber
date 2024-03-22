@@ -13,7 +13,14 @@ export function Contatos(): ReactElement {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const htmlElement = entry.target as HTMLDivElement;
-        htmlElement.style.animation = "animateToRight 1s forwards";
+
+        if(htmlElement.classList.contains("row")) {
+          htmlElement.style.animation = "animateWidthRow 0.5s forwards";
+          htmlElement.style.animationDelay = "0.3s";
+        } else {
+          htmlElement.style.animation = "animateToRight 1s forwards";
+        }
+        
       };
     });
   }, {
@@ -24,10 +31,13 @@ export function Contatos(): ReactElement {
   if(home) {
     home.addEventListener("scroll", (): void => {
       const links = Array.from(document.querySelectorAll(".links a"))!;
+      const row = document.querySelector(".contatos .row")!;
 
       links.map(link => {
         intersectionObserver.observe(link);
       });
+
+      intersectionObserver.observe(row);
     })
   }
 

@@ -16,6 +16,7 @@ export const Container = styled.div`
     width: 8rem;
     height: 2px;
     margin-top: 5rem;
+    opacity: 0;
   }
 
   h2 {
@@ -36,8 +37,6 @@ export const Container = styled.div`
       margin: 3rem;
       display: flex;
       opacity: 0;
-      /* animation-delay: 0.5s; */
-      /* animation: animateToRight 0.3s forwards; */
     }
 
     svg {
