@@ -23,6 +23,10 @@ export const Container = styled.div`
     font-weight: 300;
   }
 
+  svg {
+    opacity: 0;
+  }
+
   @media(min-width: 1000px) {
     height: 50vh;
 
