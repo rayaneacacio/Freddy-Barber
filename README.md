@@ -4,8 +4,8 @@ Landing page responsiva para a barbearia Freddy Barber.
 <br>
 
 <p align="center">
-  <img height="400px" src=".github/3.gif" />  
-  <img height="400px" src=".github/1.gif" />  
+  <img height="300px" src=".github/3.gif" />  
+  <img height="300px" src=".github/1.gif" />  
 </p>
 
 ##
