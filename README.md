@@ -1,4 +1,4 @@
-Landing page responsiva para a barbearia Freddy Barber.
+Landing page responsiva para a barbearia Freddy Barber, desenvolvida com Typescript, Reactjs e Styled Components.
 > Acesso: [freddybarber.netlify.app](https://freddybarber.netlify.app/)
 
 <br>
